@@ -25,6 +25,7 @@ views:
   title: My view
   cards:
     - type: custom:pollenkoll-card
+      title: false
       city: stockholm
       allergens:
         - al
@@ -43,6 +44,7 @@ views:
 | type | string | **Required** | `custom:pollenkoll-card`
 | city | string | **Required** | Lower case city from which you have sensors
 | allergens | list | **Required** | List of allergens for which you have sensors
+| title | list | **Optional** | set to `false` to remove the heading from the card
 
 
 Like my work and want to say thanks? Do it here:

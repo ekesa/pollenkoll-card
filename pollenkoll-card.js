@@ -36,7 +36,7 @@ class PollenKollCard extends HTMLElement {
       
       sensors.push(dict)
     }
-    if (card != null) {
+    if (card != null && (this.config.title == null || this.config.title == true)) {
       card.header = `Pollenprognos ${city.charAt(0).toUpperCase() + city.slice(1)}`;
     }
 
