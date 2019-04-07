@@ -44,8 +44,9 @@ views:
 | type | string | **Required** | `custom:pollenkoll-card`
 | city | string | **Required** | Lower case city from which you have sensors
 | allergens | list | **Required** | List of allergens for which you have sensors
-| title | list | **Optional** | set to `false` to remove the heading from the card
-| minimal | list | **Optional** | set to `true` to show only todays pollen levels in a smaller card 
+| title | boolean | **Optional** | Set to `false` to remove the heading from the card
+| minimal | boolean | **Optional** | Set to `true` to show only todays pollen levels in a smaller card
+| compact | boolean | **Optional** | Set to `true` to have the original look (not minimal) but with smaller images.
 
 The minimal card:
 

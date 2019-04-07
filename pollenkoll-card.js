@@ -53,12 +53,17 @@ class PollenKollCard extends HTMLElement {
           padding: 3px;
           text-align: center;
         }
-        // tbody tr:nth-child(odd) {
-        //   background-color: var(--paper-card-background-color);
-        // }
-        // tbody tr:nth-child(even) {
-        //   background-color: var(--secondary-background-color);
-        // }
+        ${this.config.compact == true ? 
+          `img {
+            width: 50%;
+          }
+          p {
+            margin-top: 3px;
+          }`
+          : ``
+
+        }
+
       </style>
       <table class="forecast">
           <thead>
@@ -106,12 +111,6 @@ class PollenKollCard extends HTMLElement {
                   padding: 3px;
                   text-align: center;
                 }
-                // tbody tr:nth-child(odd) {
-                //   background-color: var(--paper-card-background-color);
-                // }
-                // tbody tr:nth-child(even) {
-                //   background-color: var(--secondary-background-color);
-                // }
               </style>
               <table class="forecast">
               <tr class="allergen">
