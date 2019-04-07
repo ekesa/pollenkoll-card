@@ -45,6 +45,11 @@ views:
 | city | string | **Required** | Lower case city from which you have sensors
 | allergens | list | **Required** | List of allergens for which you have sensors
 | title | list | **Optional** | set to `false` to remove the heading from the card
+| minimal | list | **Optional** | set to `true` to show only todays pollen levels in a smaller card 
+
+The minimal card:
+
+<img src="https://github.com/isabellaalstrom/pollenkoll-card/blob/master/pollenkoll-card-minimal-conf.png" alt="Pollenkoll Lovelace Card minimal configuration option" />
 
 
 Like my work and want to say thanks? Do it here:

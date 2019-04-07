@@ -40,7 +40,9 @@ class PollenKollCard extends HTMLElement {
       card.header = `Pollenprognos ${city.charAt(0).toUpperCase() + city.slice(1)}`;
     }
 
-    this.content.innerHTML = `
+    this.content.innerHTML = this.config.minimal == false || this.config.minimal == null ?    
+    
+     `
       <style>
         .forecast {
           width: 100%;
@@ -92,6 +94,36 @@ class PollenKollCard extends HTMLElement {
               </tr>`).join('')}
               </div>
               </div>`
+              :
+              `
+              <style>
+                .forecast {
+                  width: 100%;
+                  padding: 7px;
+                  height: 100%;
+                }
+                td {
+                  padding: 3px;
+                  text-align: center;
+                }
+                // tbody tr:nth-child(odd) {
+                //   background-color: var(--paper-card-background-color);
+                // }
+                // tbody tr:nth-child(even) {
+                //   background-color: var(--secondary-background-color);
+                // }
+              </style>
+              <table class="forecast">
+              <tr class="allergen">
+                  ${sensors.map(sensor => `
+                        <td>
+                        <p>${sensor.allergen_locale}</p>
+                        <img src="/local/pollen_img/${sensor.allergens.toLowerCase()}_${sensor.day1.state == "unknown" ? 0 : sensor.day1.state}.svg"/>
+                        <p>${sensor.day1.attributes.description}</p>
+                        </td>
+                      `).join('')}</tr>
+                      </div>
+                      </div>`
   }
 
   setConfig(config) {
