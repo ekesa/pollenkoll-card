@@ -78,21 +78,21 @@ class PollenKollCard extends HTMLElement {
                 ${
                   sensor.day1.state == "unknown" ? `<td>okänt</td>` :
                 `<td>
-                  <img src="/local/pollen_img/${sensor.day1.state + ".png"}"/>
+                  <img src="/local/pollen_img/${sensor.day1.state + ".svg"}"/>
                   <p>${sensor.day1.attributes.description}</p>
                 </td>`
                 }
                 ${
                   sensor.day2.state == "unknown" ? `<td>okänt</td>` :
                   `<td>
-                  <img src="/local/pollen_img/${sensor.day2.state + ".png"}"/>
+                  <img src="/local/pollen_img/${sensor.day2.state + ".svg"}"/>
                   <p>${sensor.day2.attributes.description}</p>
                 </td>`
                 }
                 ${
                   sensor.day3.state == "unknown" ? `<td>okänt</td>` :
                   `<td>
-                  <img src="/local/pollen_img/${sensor.day3.state + ".png"}"/>
+                  <img src="/local/pollen_img/${sensor.day3.state + ".svg"}"/>
                   <p>${sensor.day3.attributes.description}</p>
                 </td>`
                 }
