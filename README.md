@@ -1,7 +1,7 @@
 # pollenkoll-card
 A Lovelace custom card for [custom component Pollenkoll](https://github.com/JohNan/home-assistant-pollenkoll/) in Home Assistant.
 
-<b>You have to have `days_to_track` set to `3`. Sälg and asp currently not working.</b>
+<b>You have to have `days_to_track` set to a minimum of `3`.</b>
 
 <img src="https://github.com/isabellaalstrom/pollenkoll-card/blob/master/pollenkoll-card.png" alt="Pollenkoll Lovelace Card" />
 
@@ -26,15 +26,17 @@ views:
   cards:
     - type: custom:pollenkoll-card
       title: false
-      city: stockholm
+      city: Stockholm
       allergens:
-        - al
-        - alm
-        - björk
-        - ek
-        - gråbo
-        - gräs
-        - hassel
+        - Al
+        - Alm
+        - Ambrosia
+        - Björk
+        - Ek
+        - Gråbo
+        - Gräs
+        - Hassel
+        - Sälg / vide   # this one is important you write just like this.
 ```
 
 ## Options
@@ -47,6 +49,7 @@ views:
 | title | boolean | **Optional** | Set to `false` to remove the heading from the card
 | minimal | boolean | **Optional** | Set to `true` to show only todays pollen levels in a smaller card
 | compact | boolean | **Optional** | Set to `true` to have the original look (not minimal) but with smaller images.
+| show_state | boolean | **Optional** | Set to `false` if you don't want to show the state text under the images.
 
 The minimal card:
 
