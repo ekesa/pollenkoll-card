@@ -71,22 +71,19 @@ class PollenKollCard extends HTMLElement {
           ${sensors.map(sensor => `
               <tr class="allergen">
                 <td><img src="/local/pollen_img/${sensor.allergens.toLowerCase()}_${sensor.day1.state == "unknown" ? 0 : sensor.day1.state}.svg"/><p>${sensor.allergen_locale}</p></td>
-                ${
-        sensor.day1.state == "unknown" ? `<td>okänt</td>` :
+                ${sensor.day1.state == "unknown" ? `<td>okänt</td>` :
           `<td>
                   <img src="/local/pollen_img/${sensor.day1.state + ".svg"}"/>
                   ${this.config.show_state == true || this.config.show_state == null ? `<p class="state-text">${sensor.day1.attributes.description} </p>`: ""}
                   </td>`
         }
-                ${
-        sensor.day2.state == "unknown" ? `<td>okänt</td>` :
+                ${sensor.day2.state == "unknown" ? `<td>okänt</td>` :
           `<td>
                   <img src="/local/pollen_img/${sensor.day2.state + ".svg"}"/>
                   ${this.config.show_state == true || this.config.show_state == null ? `<p class="state-text">${sensor.day2.attributes.description} </p>`: ""}
                   </td>`
         }
-                ${
-        sensor.day3.state == "unknown" ? `<td>okänt</td>` :
+                ${sensor.day3.state == "unknown" ? `<td>okänt</td>` :
           `<td>
                   <img src="/local/pollen_img/${sensor.day3.state + ".svg"}"/>
                   ${this.config.show_state == true || this.config.show_state == null ? `<p class="state-text">${sensor.day3.attributes.description} </p>`: ""}
