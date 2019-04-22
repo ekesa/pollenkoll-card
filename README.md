@@ -1,7 +1,7 @@
 # pollenkoll-card
 A Lovelace custom card for [custom component Pollenkoll](https://github.com/JohNan/home-assistant-pollenkoll/) in Home Assistant.
 
-<b>You have to have `days_to_track` set to a minimum of `3`.</b>
+<b>To use this card you have to have `days_to_track` set to a minimum of `3`, and `state_as_string` has to be false or not set (default false).</b>
 
 <img src="https://github.com/isabellaalstrom/pollenkoll-card/blob/master/pollenkoll-card.png" alt="Pollenkoll Lovelace Card" />
 
