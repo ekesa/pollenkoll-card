@@ -48,7 +48,7 @@ views:
 | allergens | list | **Required** | List of allergens for which you have sensors
 | title | boolean | **Optional** | Set to `false` to remove the heading from the card
 | minimal | boolean | **Optional** | Set to `true` to show only todays pollen levels in a smaller card
-| compact | boolean | **Optional** | Set to `true` to have the original look (not minimal) but with smaller images.
+| compact | boolean | **Optional** | Set to `false` to have the three day forecast with bigger images.
 | show_state | boolean | **Optional** | Set to `false` if you don't want to show the state text under the images.
 
 The minimal card:
