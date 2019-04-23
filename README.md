@@ -6,21 +6,19 @@ A Lovelace custom card for [custom component Pollenkoll](https://github.com/JohN
 <img src="https://github.com/isabellaalstrom/pollenkoll-card/blob/master/pollenkoll-card.png" alt="Pollenkoll Lovelace Card" />
 
 ## Installation
+This card requires [card-tools](https://github.com/thomasloven/lovelace-card-tools) to be installed.
 
-1. Copy `pollenkoll-card.js` to `<config directory>/www/pollenkoll-card.js`
-2. Copy the folder `pollen_img` and place in `<config directory>/www/`
-3. Add `pollenkoll-card` as a resource in `ui-lovelace.yaml` or in raw config editor if you don't use yaml mode.
-
-```yaml
-resources:
-  - url: /local/pollenkoll-card.js
-    type: js
-```
-
+For installation instructions [see this guide](https://github.com/thomasloven/hass-config/wiki/Lovelace-Plugins).
 
 ## Example configuration
 Pick the allergens you want to display.
 ```yaml
+title: My awesome Lovelace!
+resources:
+  - url: /local/card-tools.js
+    type: js
+  - url: /local/pollenkoll-card.js
+    type: js
 views:
   title: My view
   cards:
